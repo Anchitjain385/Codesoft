@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int randomnum=rand()%100+1;
+	cout<<"Welcome to guess the number world.Please guess a number between 1 to 100!"<<endl;
+	int tries = 1;
+	int	guess = 0;
+	while(guess!=randomnum)
+	{
+		cout<<"Guess! ";
+		cin>>guess;
+		if(guess>randomnum)
+		{
+			cout<<"Your guess is too high."<<endl;
+		}
+		else if (guess<randomnum)
+		{
+			cout<<"Your guess is too low."<<endl;
+		}
+		tries++;
+	}
+	if (tries<10)
+	cout<<"YOU ARE TOO ACCURATE."<<endl;
+	else if(tries>10)
+	cout<<"YOU ARE'NT ACCURATE."<<endl;
+	
+}
